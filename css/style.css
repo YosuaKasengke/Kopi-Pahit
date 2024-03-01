@@ -145,6 +145,11 @@ body {
   background-color: var(--primary);
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero .content .cta:hover {
+  transform: scale(1.1);
 }
 
 /* About section */
@@ -411,4 +416,25 @@ footer .credit a {
   html {
     font-size: 50%;
   }
+}
+
+/* Tampilan elemen pencarian pada navbar */
+.search-form {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  background-color: var(--bg);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 5px;
+  width: 80%;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.search-form.active {
+  display: block;
+  opacity: 1;
 }
